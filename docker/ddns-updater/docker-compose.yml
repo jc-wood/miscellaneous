@@ -10,7 +10,7 @@ services:
     volumes:
       - .\data:/updater/data
     environment:
-      - CONFIG=
+      - CONFIG=config.json
       - PERIOD=8h
       - UPDATE_COOLDOWN_PERIOD=1m
       - PUBLICIP_FETCHERS=all
