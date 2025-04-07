@@ -1,1 +1,24 @@
-#temp
+name: proxy
+
+services:
+  web:
+    container_name: proxy-web
+    image: jc21/nginx-proxy-manager:latest
+    restart: always
+    ports:
+      - 80:80
+      - 81:81
+      - 443:443
+    environment:
+      DB_SQLITE_FILE: "/data/database.sqlite"
+    volumes:
+      - ./data/:/data
+      - ./config/_hsts.conf:/app/templates/_hsts.conf:ro
+      # cerbot uses symlinks which aren't supported on exFat partitions.
+      - ./ssl/:/etc/letsencrypt
+    networks:
+      - web
+
+networks:
+  web:
+    name: web
