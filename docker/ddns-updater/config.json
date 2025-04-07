@@ -1,0 +1,20 @@
+{
+    "settings": [
+      {
+        "provider": "porkbun",
+        "domain": // YOUR DOMAIN,
+        "api_key": // YOUR API KEY,
+        "secret_api_key": // YOUR SECRET KEY,
+        "ip_version": "ipv4",
+        "ipv6_suffix": ""
+      },
+      {
+        "provider": "porkbun",
+        "domain": // YOUR OTHER DOMAIN OR A WILDCARD DOMAIN,
+        "api_key": // API KEY,
+        "secret_api_key": // SECRET KEY,
+        "ip_version": "ipv4",
+        "ipv6_suffix": ""
+      }
+    ]
+  }
